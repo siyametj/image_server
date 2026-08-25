@@ -114,6 +114,22 @@ The directory is created automatically when the application starts.
 - Jinja2
 - HTML / CSS / JavaScript
 
+## 👨‍💻 Author
+
+**Siyam** (@siyametj)
+
+- 🌐 GitHub: [@siyametj](https://github.com/siyametj)
+- 🐧 Environment: Debian Linux (Power User 🚀)
+
+---
+
+## ⭐ Support
+
+If you find my learning journey interesting, don't forget to leave a **STAR**! ⭐
+
 ## Note
 
 This project is intended for local network use. It is not designed as a public internet-facing file upload service.
+
+## License
+This project is under the MIT License. See the [LICENSE](LICENSE) file for details.
