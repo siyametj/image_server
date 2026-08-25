@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b1020">
+
+    <title>ImageDrop</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <section class="upload-card">
+
+            <!-- Header -->
+            <header class="app-header">
+
+                <div class="brand">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 16V4M12 4L7.5 8.5M12 4L16.5 8.5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5 13V18C5 19.1046 5.89543 20 7 20H17C18.1046 20 19 19.1046 19 18V13"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h1>ImageDrop</h1>
+                        <p>Fast and simple image transfer</p>
+                    </div>
+                </div>
+
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    Ready
+                </div>
+
+            </header>
+
+
+            <!-- Upload Zone -->
+            <form id="uploadForm">
+
+                <div class="drop-zone" id="dropZone" tabindex="0">
+
+                    <input type="file" id="fileInput" multiple accept="image/*">
+
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 16V4M12 4L7.5 8.5M12 4L16.5 8.5" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5 13V18C5 19.1046 5.89543 20 7 20H17C18.1046 20 19 19.1046 19 18V13"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <h2>Drop images here</h2>
+
+                    <p class="drop-description">
+                        or click to browse from your device
+                    </p>
+
+                    <button type="button" class="browse-btn" id="browseBtn">
+                        Browse Images
+                    </button>
+
+                    <div class="supported">
+                        <span>JPG</span>
+                        <span>PNG</span>
+                        <span>WEBP</span>
+                        <span>GIF</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Selected Files -->
+                <section class="preview-section" id="previewContainer" hidden>
+
+                    <div class="section-header">
+
+                        <div>
+                            <h3>Selected Images</h3>
+                            <p id="selectedCount">0 images</p>
+                        </div>
+
+                        <button type="button" class="clear-btn" id="clearAllBtn">
+                            Clear all
+                        </button>
+
+                    </div>
+
+
+                    <div class="preview-grid" id="previewGrid"></div>
+
+                </section>
+
+
+                <!-- Upload Footer -->
+                <div class="upload-footer">
+
+                    <div class="upload-info">
+
+                        <div class="info-item">
+                            <span class="info-label">Files</span>
+                            <strong id="fileCount">0</strong>
+                        </div>
+
+                        <div class="info-divider"></div>
+
+                        <div class="info-item">
+                            <span class="info-label">Size</span>
+                            <strong id="totalSize">0 MB</strong>
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" id="uploadBtn" class="upload-btn" disabled>
+                        <span class="btn-text">Upload Images</span>
+
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                </div>
+
+
+                <!-- Progress -->
+                <div class="progress-area" id="progressArea" hidden>
+
+                    <div class="progress-header">
+                        <span>Uploading images...</span>
+                        <strong id="progressPercent">0%</strong>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                </div>
+
+            </form>
+
+
+            <!-- Status -->
+            <div id="status" class="status-message" role="status" aria-live="polite"></div>
+
+
+            <footer class="app-footer">
+                <span>Secure local transfer</span>
+                <span class="footer-dot">•</span>
+                <span>Images only</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
